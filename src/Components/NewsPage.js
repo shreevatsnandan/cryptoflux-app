@@ -1,8 +1,11 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import './NewPage.css';
 
+const LazyLoadedArticles = React.lazy(() => import('./LazyLoadedArticles'));
+
 const NewsPage = () => {
     const [articles, setArticles] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         fetch('https://newsapi.org/v2/everything?q=crypto&apiKey=a446e53acca14725b2cff865167aac35')
@@ -14,9 +17,11 @@ const NewsPage = () => {
             })
             .then(data => {
                 setArticles(data.articles);
+                setIsLoading(false);
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
+                setIsLoading(false);
             });
     }, []);
 
@@ -25,19 +30,8 @@ const NewsPage = () => {
             <div className="newshead">
                 <h1>Crypto News</h1>
             </div>
-            <Suspense fallback={<div>please wait...</div>}>
-                <div className="articles-container">
-                    {articles.map((article, index) => (
-                        <div key={index} className="article-card">
-                            {article.urlToImage && <img src={article.urlToImage} alt={article.title} className="article-image" />}
-                            <div className="article-details">
-                                <h3>{article.title}</h3>
-                                <p>{article.description}</p>
-                                <a href={article.url} target="_blank" rel="noopener noreferrer" className="read-more">Read More</a>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <Suspense fallback={<div>Loading...</div>}>
+                {!isLoading && <LazyLoadedArticles articles={articles} />}
             </Suspense>
         </div>
     );
