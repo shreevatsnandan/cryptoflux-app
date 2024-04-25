@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stardos+Stencil:wght@400;700&display=swap');
+
+.crypto-list {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: var(--font-clr);
+    margin-bottom: 2vh;
+    align-items: center;
+    left: 50%;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input {
+    color: black;
+    padding-left: 1vw;
+    background-color: azure;
+    font-size: 1em;
+    color: black;
+    width: 50vw;
+    height: 5vh;
+    border-radius: 20px;
+}
+
+.coin-container {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.coin-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-clr);
+    width: calc(20% - 20px);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+    .coin-card {
+        width: calc(50% - 10px);
+    }
+}
+
+.coin-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.coin-card h3 {
+    background-color: var(--card-clr);
+    margin-top: 0;
+    color: var(--card-f-clr);
+}
+
+.coin-card p {
+    max-width: 80%;
+    padding: 4px;
+    background-color: var(--card-p-clr);
+    margin-bottom: 0;
+    border-radius: 10px;
+}

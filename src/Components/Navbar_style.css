@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Stardos+Stencil:wght@400;700&display=swap');
+
+*{
+    background: var(--bg-clr);
+}
+
+.logotxt{
+    background-color: orange;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.app-logo img{
+    display: none;
+    width: 70px;
+    height: 70px;
+}
+
+.app-logo{
+    color: green;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: xx-large;
+    margin: 2vh 0vw 0vh 2vw;
+    display: flex;
+    align-items: center;
+}
+
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.Navbar Link{
+    color: var(--font-clr);
+}
+
+.nav-option ul{
+    color: var(--font-clr);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-option li{
+    border-radius: 2px;
+    padding: 4px;
+    margin: 2vh 2vw 0vh 0vw;
+}
+
+.nav-option li:hover{
+    background-color: rgba(240, 255, 255, 0.49);
+}
+
+.nav-state{
+    display: flex;
+    align-items: center;
+}
+
+.nav-state img{
+    height: 30px;
+    width: 30px;
+}
+
+.nav-watchlist{
+    align-items: center;
+    margin: 1vw;
+}
+
+.theme-cng{
+    color: var(--font-clr);
+    border-radius: 100px;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    margin-right: 3vw;
+}
+
+@media screen and (max-width: 600px) {
+    .logotxt{
+        display: none;
+    }
+
+    .nav-watchlist b{
+        display: none;
+    }
+
+    body {
+        overflow: inherit;
+    }
+
+    .app-logo img{
+        display: block;
+    }
+
+    .nav-option ul{
+        font-size: small;
+    }
+}

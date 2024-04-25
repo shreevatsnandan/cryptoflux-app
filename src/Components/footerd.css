@@ -1,0 +1,83 @@
+.footer{
+    background-color: grey;
+   
+    display: flex;
+    justify-content: space-between;
+    padding: 0+40px 90px;
+}
+
+.pages{
+    background-color: grey;
+}
+
+
+.learn-more ul{
+    background-color: grey;
+    list-style-type: none;
+}
+
+.pages ul{
+    background-color: grey;
+    list-style-type: none;
+}
+
+
+.pages h3 {
+    background-color: grey;
+}
+
+.app-name img{
+    
+    width: 70px;
+    background-color: grey;
+    height: 70px;
+}
+
+.learn-more{
+    background-color: grey;
+}
+
+
+.learn-more h3{
+    background-color: grey;
+}
+
+
+.learn-more li{
+    background-color: grey;
+}
+
+.about-app{
+    padding-top: 5vh;
+    background-color: grey;
+}
+.app-name{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+}
+
+.about-app-txt{
+    background-color: grey;
+}
+
+.pages Link{
+    background-color: grey;
+}
+
+.pages li{
+    background-color: grey;
+}
+
+.app-name:hover{
+    cursor: pointer;
+}
+
+.pages li:hover {
+cursor: pointer;
+  }

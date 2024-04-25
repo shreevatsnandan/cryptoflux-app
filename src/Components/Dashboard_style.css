@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Stardos+Stencil:wght@400;700&display=swap');
+
+.dashboard {
+    color: var(--font-clr);
+    background-color: var(--bg-clr);
+    font-family: "Playfair Display", serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dashboardHeader {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    flex: 0 0 100px;
+    img {
+        width: 100%;
+    }
+}
+
+.recharts-wrapper {
+    height: 250px;
+}
+
+.recharts-text,
+.recharts-line-text {
+    font-size: 0.7rem;
+}
+
+.currentPrice {
+    flex: 1;
+    margin-left: 20px;
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+}
+
+.graph-dd select {
+    border-radius: 7px;
+    padding: 2px;
+    color: var(--font-clr);
+    width: 9vw;
+    height: 5vh;
+    font-size: medium;
+}
+
+.graph-dd {
+    margin: 25px 0px 30px 80px;
+}
+
+.graph {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.recharts-wrapper {
+    width: 100%;
+    margin: 0;
+}
+
+.recharts-cartesian-axis-path {
+    stroke: #ddd;
+}
+
+.recharts-text {
+    fill: #333;
+}
+
+.recharts-line-text {
+    fill: #82ca9d;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-right: 10px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #eee;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 10px auto;
+}
+
+.big-button {
+    width: 45%;
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    margin: 2vw;
+}
+
+.big-button:hover {
+    background-color: #eee;
+}
+
+.quantity {
+    display: flex;
+    margin-left: 6vw;
+}
+
+.quantityTxt {
+    margin-right: 4vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .recharts-wrapper {
+        height: 250px;
+    }
+
+    .recharts-text,
+    .recharts-line-text {
+        font-size: 0.7rem;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
